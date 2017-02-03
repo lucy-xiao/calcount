@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.lucyxiao.crunchtime.MainActivity">
+
+    <TextView
+
+        android:text="Burned 100 Calories"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold"
+        android:layout_weight="1"
+        android:padding="3dip"
+        android:id="@+id/calories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calories"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/tableLayout">
+        <TableRow>
+            <TextView
+
+                android:layout_column="1"
+                android:text="Exercise Type"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="3dip" />
+            <TextView
+                android:layout_column="2"
+                android:text="Reps / Min"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:padding="3dip" />
+
+
+        </TableRow>
+        <View
+            android:layout_height="3dip"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#999"/>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:textSize="16sp"
+                android:text="Pushup"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="3dip" />
+            <TextView
+                android:layout_column="2"
+                android:text="350 Reps"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/pushup_rep"
+                android:padding="3dip" />
+
+        </TableRow>
+        <View
+            android:layout_height="2dip"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#FF909090"/>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Situp"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="3dip" />
+            <TextView
+                android:layout_column="2"
+                android:text="200 Reps"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:id="@+id/situp_rep"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="3dip" />
+
+        </TableRow>
+        <View
+            android:layout_height="2dip"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#FF909090"/>
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Jumping Jacks"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:padding="3dip" />
+            <TextView
+                android:layout_column="2"
+                android:text="10 Min"
+                android:layout_weight="1"
+                android:id="@+id/jump_min"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="3dip" />
+
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#FF909090" />
+
+        <TableRow>
+            <TextView
+                android:layout_column="1"
+                android:text="Jogging"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="3dip" />
+            <TextView
+                android:layout_column="2"
+                android:text="12 Min"
+                android:id="@+id/jog_min"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="3dip" />
+
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#FF909090"/>
+
+        <!--<TableRow>-->
+            <!--<TextView-->
+                <!--android:layout_column="1"-->
+                <!--android:text="Export..."-->
+                <!--android:padding="3dip" />-->
+            <!--<TextView-->
+                <!--android:text="Ctrl-E"-->
+                <!--android:gravity="right"-->
+                <!--android:padding="3dip" />-->
+        <!--</TableRow>-->
+
+        <!--<View-->
+            <!--android:layout_height="2dip"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:background="#FF909090" />-->
+
+        <!--<TableRow>-->
+            <!--<TextView-->
+                <!--android:layout_column="1"-->
+                <!--android:text="Quit"-->
+                <!--android:padding="3dip" />-->
+        <!--</TableRow>-->
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/input_wrapper"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tableLayout"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:text="Enter Exercise Type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tableLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:textSize="24sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/exercise_title" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+
+                android:layout_below="@+id/tableLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:id="@+id/editText_exercise"
+                android:gravity="center_horizontal"
+                android:hint="Ex: Pushup"
+                android:padding="8dp"
+                android:background="@drawable/edittext_background" />
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical">
+                <TextView
+                    android:text="Enter # Reps/Min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tableLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:id="@+id/num_reps_title" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:layout_below="@+id/tableLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/editText_reps"
+                    android:gravity="center_horizontal"
+                    android:hint="Ex: 100"
+                    android:padding="8dp"
+                    android:background="@drawable/edittext_background" />
+
+            </LinearLayout>
+            <Button
+                android:text="Update"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#FFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="24dp"
+                android:padding="8pt"
+                android:id="@+id/button"
+                android:layout_gravity="center"
+                android:layout_below="@+id/input_wrapper"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#303F9F"
+                android:onClick="update"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
